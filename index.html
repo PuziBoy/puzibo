@@ -37,7 +37,7 @@ function division(){
 	else {
 	rezultat=peremennaja1/peremennaja2;
 	document.anketa.otvet.value=rezultat;}
-	}
+}
 function pow(){
 	peremennaja1=parseFloat(document.anketa.odin.value);
 	//alert(peremennaja1);
@@ -48,7 +48,11 @@ function pow(){
 function sqrt(){
 	peremennaja1=parseFloat(document.anketa.odin.value);
 	rezultat=Math.sqrt(peremennaja1);
-	document.anketa.otvet.value=rezultat;
+	if (peremennaja1 < 0)
+	{alert(" Корень отрицательного числа получить нельзя ")
+	return;}
+	else{
+	document.anketa.otvet.value=rezultat;}
 }
 function sin(){
 	peremennaja1=parseFloat(document.anketa.odin.value);
